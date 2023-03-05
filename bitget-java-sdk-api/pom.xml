@@ -12,15 +12,15 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <lombok-version>1.16.20</lombok-version>
-        <okhttp-version>4.7.2</okhttp-version>
-        <retorfit2-version>2.8.1</retorfit2-version>
-        <fastjson-version>1.2.70</fastjson-version>
-        <commons-lang3-version>3.7</commons-lang3-version>
-        <commons-codec-version>1.14</commons-codec-version>
-        <junit-version>4.12</junit-version>
+        <lombok-version>1.18.26</lombok-version>
+        <okhttp-version>4.10.0</okhttp-version>
+        <retrofit2-version>2.9.0</retrofit2-version>
+        <fastjson-version>2.0.24</fastjson-version>
+        <commons-lang3-version>3.12.0</commons-lang3-version>
+        <junit-version>4.13.2</junit-version>
         <commons-collections4>4.4</commons-collections4>
-        <google-guava>27.1-jre</google-guava>
+        <logback-classic-version>1.4.5</logback-classic-version>
+        <commons-compress-version>1.22</commons-compress-version>
     </properties>
 
     <dependencies>
@@ -37,27 +37,27 @@
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
-            <version>${retorfit2-version}</version>
+            <version>${retrofit2-version}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-scalars</artifactId>
-            <version>${retorfit2-version}</version>
+            <version>${retrofit2-version}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-gson</artifactId>
-            <version>${retorfit2-version}</version>
+            <version>${retrofit2-version}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-jackson</artifactId>
-            <version>${retorfit2-version}</version>
+            <version>${retrofit2-version}</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>adapter-rxjava</artifactId>
-            <version>${retorfit2-version}</version>
+            <version>${retrofit2-version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -75,29 +75,19 @@
             <version>${commons-collections4}</version>
         </dependency>
         <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>${commons-codec-version}</version>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit-version}</version>
         </dependency>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${google-guava}</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
-            <version>1.18</version>
+            <version>${commons-compress-version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.3.0-alpha4</version>
+            <version>${logback-classic-version}</version>
         </dependency>
     </dependencies>
 
@@ -106,6 +96,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -114,6 +105,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M9</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
